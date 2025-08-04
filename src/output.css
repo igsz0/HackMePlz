@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-yellow-300: oklch(90.5% 0.182 98.111);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-yellow-600: oklch(68.1% 0.162 75.834);
@@ -17,7 +16,6 @@
     --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-blue-950: oklch(28.2% 0.091 267.935);
-    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
@@ -25,8 +23,6 @@
     --spacing: 0.25rem;
     --container-xs: 20rem;
     --container-md: 28rem;
-    --container-xl: 36rem;
-    --container-4xl: 56rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -43,9 +39,6 @@
     --font-weight-bold: 700;
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
-    --blur-sm: 8px;
-    --blur-md: 12px;
-    --blur-lg: 16px;
     --blur-3xl: 64px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -220,9 +213,6 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
-  .mt-12 {
-    margin-top: calc(var(--spacing) * 12);
-  }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
@@ -234,12 +224,6 @@
   }
   .flex {
     display: flex;
-  }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .table {
-    display: table;
   }
   .h-22 {
     height: calc(var(--spacing) * 22);
@@ -259,35 +243,14 @@
   .w-full {
     width: 100%;
   }
-  .w-max {
-    width: max-content;
-  }
-  .max-w-4xl {
-    max-width: var(--container-4xl);
-  }
-  .max-w-\[400px\] {
-    max-width: 400px;
-  }
   .max-w-\[550px\] {
     max-width: 550px;
-  }
-  .max-w-\[900px\] {
-    max-width: 900px;
   }
   .max-w-full {
     max-width: 100%;
   }
-  .max-w-xl {
-    max-width: var(--container-xl);
-  }
   .max-w-xs {
     max-width: var(--container-xs);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -304,9 +267,6 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
-  .gap-6 {
-    gap: calc(var(--spacing) * 6);
-  }
   .space-x-6 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -320,10 +280,6 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -332,8 +288,9 @@
     border-style: var(--tw-border-style);
     border-width: 5px;
   }
-  .border-gray-200 {
-    border-color: var(--color-gray-200);
+  .border-\[5px\] {
+    border-style: var(--tw-border-style);
+    border-width: 5px;
   }
   .border-gray-400 {
     border-color: var(--color-gray-400);
@@ -341,28 +298,10 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-white\/20 {
-    background-color: color-mix(in srgb, #fff 20%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
-    }
-  }
   .bg-white\/25 {
     background-color: color-mix(in srgb, #fff 25%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
       background-color: color-mix(in oklab, var(--color-white) 25%, transparent);
-    }
-  }
-  .bg-white\/40 {
-    background-color: color-mix(in srgb, #fff 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 40%, transparent);
-    }
-  }
-  .bg-white\/50 {
-    background-color: color-mix(in srgb, #fff 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 50%, transparent);
     }
   }
   .bg-white\/100 {
@@ -388,9 +327,6 @@
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
-  }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -433,12 +369,6 @@
   .text-white {
     color: var(--color-white);
   }
-  .text-white\/90 {
-    color: color-mix(in srgb, #fff 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      color: color-mix(in oklab, var(--color-white) 90%, transparent);
-    }
-  }
   .italic {
     font-style: italic;
   }
@@ -450,39 +380,12 @@
       color: var(--color-gray-500);
     }
   }
-  .shadow-2xl {
-    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .shadow-inner {
     --tw-shadow: inset 0 2px 4px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
   .backdrop-blur-3xl {
     --tw-backdrop-blur: blur(var(--blur-3xl));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-blur-lg {
-    --tw-backdrop-blur: blur(var(--blur-lg));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-blur-md {
-    --tw-backdrop-blur: blur(var(--blur-md));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-blur-sm {
-    --tw-backdrop-blur: blur(var(--blur-sm));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
-  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -490,14 +393,6 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .hover\:size-11 {
-    &:hover {
-      @media (hover: hover) {
-        width: calc(var(--spacing) * 11);
-        height: calc(var(--spacing) * 11);
-      }
-    }
   }
   .hover\:text-blue-800 {
     &:hover {
@@ -517,30 +412,15 @@
       --tw-ring-color: var(--color-blue-950);
     }
   }
-  .focus\:ring-yellow-300 {
-    &:focus {
-      --tw-ring-color: var(--color-yellow-300);
-    }
-  }
   .focus\:outline-none {
     &:focus {
       --tw-outline-style: none;
       outline-style: none;
     }
   }
-  .md\:max-w-fit {
-    @media (width >= 48rem) {
-      max-width: fit-content;
-    }
-  }
   .md\:max-w-md {
     @media (width >= 48rem) {
       max-width: var(--container-md);
-    }
-  }
-  .md\:max-w-xl {
-    @media (width >= 48rem) {
-      max-width: var(--container-xl);
     }
   }
   .md\:text-3xl {
@@ -585,8 +465,9 @@
     }
   }
   .btn-primary {
+    border-radius: var(--radius-2xl);
     border-style: var(--tw-border-style);
-    border-width: 2px;
+    border-width: 5px;
     border-color: var(--color-yellow-600);
     background-color: var(--color-yellow-400);
     color: var(--color-blue-900);
@@ -600,7 +481,7 @@
   }
   .btn-secondary {
     border-style: var(--tw-border-style);
-    border-width: 2px;
+    border-width: 5px;
     border-color: var(--color-blue-800);
     background-color: var(--color-blue-500);
     color: var(--color-white);
@@ -755,11 +636,6 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -850,7 +726,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
