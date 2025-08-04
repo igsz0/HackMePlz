@@ -32,10 +32,11 @@ async function isPasswordPwned(password) {
 
 async function checkPassword() {
   const pwd = document.getElementById("password").value;
-  const feedback = document.getElementById("feedback");
+  const feedback = document.getElementById("LaptopMessage");
 
   if (pwd.length < 4) {
-    feedback.innerText = "That’s not a password. That’s a sneeze.";
+    feedback.innerText = "That’s not a password. That’s a sneeze omg no hell naw. make sure its 4 chars or more";
+    
     return;
   }
 

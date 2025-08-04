@@ -13,12 +13,31 @@
     @apply bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-800 shadow-inner;
   }
 
+    .btn-green {
+    @apply bg-[#49FF00] hover:bg-[#4add0f] text-white border-5 border-green-500 rounded-2xl shadow-inner;
+  }
+
   .btn-icon {
     @apply transition group-hover:translate-x-1;
   }
 
   .btn-text {
     @apply transition group-hover:scale-105;
+  }
+
+   .speech-bubble {
+    @apply relative bg-[#9c94f2] rounded-2xl p-4 border-[5px] border-[#a9a3fa] text-black text-center font-bold mb-3;
+  }
+
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -25px; /* Position below bubble */
+    right: 3rem; /* Adjust to point at your laptop */
+    border-width: 10px;
+    border-style: solid;
+    border-width: 25px 20px 0 20px;
+    border-color: #9c94f2 transparent transparent transparent;
   }
 
   
