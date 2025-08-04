@@ -6,6 +6,7 @@
   <title>HackMePlz - Password Safety Check</title>
   <link rel="stylesheet" href="./output.css" />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet" />
+  <script src="main.js"></script>
   <style>
     body {
       font-family: 'Fredoka', sans-serif;
@@ -15,7 +16,6 @@
 
 <body class="bg-cover bg-center bg-no-repeat bg-fixed min-h-screen text-white" style="background-image: url(HackMePlzBackgroundv3.png);">
 
-  <!-- Sign Up -->
 
 
   <!-- Main Content -->
@@ -51,39 +51,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="mt-10 text-sm text-white space-x-6">
-      <a href="https://google.com" class="underline hover:text-yellow-300 transition">☕ Buy me a redbull</a>
-      <a href="about.html" class="underline hover:text-yellow-300 transition">⚙️ About HackMePlz</a>
+    <footer class="mt-10 text-sm text-blue-950 space-x-6">
+      <a href="https://google.com" class="underline hover:text-blue-800 transition">☕ Buy me a redbull</a>
+      <a href="about.html" class="underline hover:text-blue-800 transition">⚙️ About HackMePlz</a>
     </footer>
 
-    <!-- Shipwrecked CTA Button -->
+
    
     
   </main>
 
-  <!-- JS -->
-  <script>
-    function checkPassword() {
-      const pwd = document.getElementById("password").value;
-      const feedback = document.getElementById("feedback");
 
-      if (pwd.length < 4) {
-        feedback.innerText = "That’s not a password. That’s a sneeze.";
-      } else if (pwd.toLowerCase() === "password") {
-        feedback.innerText = "Using 'password'? Bold. Very bold.";
-      } else if (pwd.length < 8) {
-        feedback.innerText = "Short. Weak. Try again, champ.";
-      } else if (/1234/.test(pwd)) {
-        feedback.innerText = "Nice. Predictable as sunrise.";
-      } else if (/^(qwerty|abc123)$/i.test(pwd)) {
-        feedback.innerText = "A true relic of keyboard smashing.";
-      } else if (pwd.length >= 12 && /[A-Z]/.test(pwd) && /[0-9]/.test(pwd) && /[^a-zA-Z0-9]/.test(pwd)) {
-        feedback.innerText = "Not bad... not bad at all.";
-      } else { 
-        feedback.innerText = "Meh. Could be worse.";
-      }
-    }
-  </script>
 
 </body>
 </html>
