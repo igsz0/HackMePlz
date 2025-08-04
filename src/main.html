@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HackMePlz - Password Safety Check</title>
+  <link rel="stylesheet" href="./output.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Fredoka', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-cover bg-center bg-no-repeat bg-fixed min-h-screen text-white" style="background-image: url(HackMePlzBackgroundv3.png);">
+
+  <!-- Sign Up -->
+
+
+  <!-- Main Content -->
+  <main class="flex flex-col items-center justify-center min-h-screen px-6 py-10 text-center">
+
+    <!-- Logo -->
+    <div class="mb-8">
+      <img src="HackMePlzLogoTextWhiteOutline.png" alt="HackMePlz Logo" class="max-w-xs md:max-w-md mx-auto " />
+      <p class="text-lg md:text-xl italic mt-3 text-white/90">Where weak passwords come to die 💀</p>
+    </div>
+
+    <!-- Card -->
+    <section class="w-full max-w-xl bg-white/100 border-2 border-gray-400 rounded-xl  p-8 space-y-6 backdrop-blur-sm">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-950 ">Enter your pathetic excuse of a password below...</h2>
+     
+     
+      <!-- Input -->
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter your tragic password"
+        class="w-full px-6 py-4 text-center text-black text-lg rounded-full shadow-inner placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition backdrop-blur-3xl bg-white/100 border-gray-400 border-2"
+      />
+
+      <!-- Button -->
+      <button onclick="checkPassword()" class="btn btn-primary btn-group">
+        <span class="btn-icon">🔐</span>
+        <span class="btn-text">Check</span>
+      </button>
+
+      <!-- Feedback -->
+      <div id="feedback" class="text-blue-950 text-xl font-bold min-h-[2rem] pt-2"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-10 text-sm text-white space-x-6">
+      <a href="https://google.com" class="underline hover:text-yellow-300 transition">☕ Buy me a redbull</a>
+      <a href="about.html" class="underline hover:text-yellow-300 transition">⚙️ About HackMePlz</a>
+    </footer>
+
+    <!-- Shipwrecked CTA Button -->
+   
+    
+  </main>
+
+  <!-- JS -->
+  <script>
+    function checkPassword() {
+      const pwd = document.getElementById("password").value;
+      const feedback = document.getElementById("feedback");
+
+      if (pwd.length < 4) {
+        feedback.innerText = "That’s not a password. That’s a sneeze.";
+      } else if (pwd.toLowerCase() === "password") {
+        feedback.innerText = "Using 'password'? Bold. Very bold.";
+      } else if (pwd.length < 8) {
+        feedback.innerText = "Short. Weak. Try again, champ.";
+      } else if (/1234/.test(pwd)) {
+        feedback.innerText = "Nice. Predictable as sunrise.";
+      } else if (/^(qwerty|abc123)$/i.test(pwd)) {
+        feedback.innerText = "A true relic of keyboard smashing.";
+      } else if (pwd.length >= 12 && /[A-Z]/.test(pwd) && /[0-9]/.test(pwd) && /[^a-zA-Z0-9]/.test(pwd)) {
+        feedback.innerText = "Not bad... not bad at all.";
+      } else { 
+        feedback.innerText = "Meh. Could be worse.";
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,3 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm md:text-base transition duration-300 active:scale-95;
+  }
+
+  .btn-primary {
+    @apply bg-yellow-400 hover:bg-yellow-500 text-blue-900 border-2 border-yellow-600 shadow-inner ;
+  }
+
+  .btn-secondary {
+    @apply bg-blue-500 hover:bg-blue-600 text-white border-2 border-blue-800 shadow-inner;
+  }
+
+  .btn-icon {
+    @apply transition group-hover:translate-x-1;
+  }
+
+  .btn-text {
+    @apply transition group-hover:scale-105;
+  }
+
+  
+}
