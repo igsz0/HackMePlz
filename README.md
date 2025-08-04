@@ -1,13 +1,20 @@
 # 🛡️ HackMePlz — Password Safety Roast Machine
 
 > My first website :)
+
 > Where weak passwords come to die...
+
+
+HackMePlz is a sarcastic yet functional password checker that roasts your weak passwords while teaching you better habits. It estimates password strength, checks if it’s been pwned, and offers brutally honest feedback — because someone had to say it.
+
+
+
 
 ## 🔥 Try it Live
 
 👉 [**HackMePlz Demo**](https://igsz0.github.io/HackMePlz/)
 
----
+
 
 ## 💡 What is This?
 
@@ -25,7 +32,7 @@
 3. It pings the **HIBP API**
 4. You get feedback based on how many times that password has shown up in breaches
 
----
+
 
 ## Tech Stack
 
