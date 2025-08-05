@@ -29,7 +29,6 @@ function pickRandom(arr) {
 
 const shortResponses = [
   "Is that a password or did your cat step on the keyboard?",
-  "Wow. Three characters. Big security. Much safe. Incredible.",
   "Try again. Maybe this time with a password and not a sneeze.",
   "You just typed 'uh'. That’s not even a full thought.",
   "A toddler could brute-force that while eating glue.",
@@ -46,11 +45,10 @@ const loadingResponses = [
   "Injecting caffeine into the servers for speed...",
   "Sacrificing a CAPTCHA to summon results...",
   "Decrypting ancient runes... no wait, it's just your awful password.",
-  "Using 100% CPU just to regret my life choices..."
 ];
 
 const pwnedResponses = (count) => [
-  `Ah yes. This password's been violated ${count.toLocaleString()} times. Bold move.`,
+  `Ah yes. This password's been saw ${count.toLocaleString()} times. Bold move.`,
   `You and ${count.toLocaleString()} other clowns thought this was original.`,
   `Welcome to the Hall of Fame of terrible passwords. ${count.toLocaleString()} entries.`,
   `Bro. ${count.toLocaleString()} hits. Even your toaster knows this one.`,
